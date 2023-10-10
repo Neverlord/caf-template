@@ -4,6 +4,8 @@ project(examples CXX)
 
 include(FetchContent)
 
+set(CAF_TAG "0.19.4" CACHE STRING "Set CAF version")
+
 set(BUILD_SHARED_LIBS OFF)
 set(CAF_ENABLE_EXAMPLES OFF)
 set(CAF_ENABLE_TESTING OFF)
@@ -11,7 +13,7 @@ set(CAF_ENABLE_TESTING OFF)
 FetchContent_Declare(
   caf
   GIT_REPOSITORY https://github.com/actor-framework/actor-framework.git
-  GIT_TAG        0.19.4
+  GIT_TAG        ${CAF_TAG}
 )
 
 FetchContent_MakeAvailable(caf)
